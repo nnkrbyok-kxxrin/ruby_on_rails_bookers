@@ -1,4 +1,12 @@
-<p id="notice"></p>
+<p id="notice">
+  <%= notice %>
+</p>
+
+<% if flash[:notice] %>
+    <div class="flash">
+         <%= flash[:notice] %>
+    </div>
+<% end %>
 
 <p>
   <strong>Title:</strong>
@@ -12,6 +20,3 @@
 
 <%= link_to "Edit", edit_book_path(@book.id) %> |
 <%= link_to "Back", books_path %>
-
-<!--(@book), method: :delete %>-->
-<!--/books/:id/edit-->
